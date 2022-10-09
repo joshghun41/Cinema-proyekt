@@ -16,9 +16,7 @@ using System.Windows.Shapes;
 
 namespace Cinema_proyekt
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+   
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -27,5 +25,7 @@ namespace Cinema_proyekt
             var viewmodel = new MainViewModel();
             this.DataContext = viewmodel;
         }
+
+      
     }
 }
