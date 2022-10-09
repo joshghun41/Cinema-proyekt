@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:Cinema_proyekt" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
@@ -15,7 +16,7 @@
             <ImageBrush ImageSource="/Views/red-curtain (1).jpg"/>
         </Grid.Background>
         <TextBox Text="{Binding SearchText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  BorderBrush="Wheat" HorizontalAlignment="Left" Margin="215,26,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="185" RenderTransformOrigin="0.531,0.507" Height="32" Foreground="White" Background="#FF220507"/>
-        <Label Content="Park Sinema" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Width="131" FontFamily="Tahoma" FontSize="20" Foreground="White" Height="42"/>
+        <Label Content="Sinema" HorizontalAlignment="Left" Margin="17,-1,0,0" VerticalAlignment="Top" Width="101" FontFamily="Tw Cen MT Condensed" FontSize="36" Foreground="White" Height="53"/>
         <Button Command="{Binding SearchCommand}" Content="" HorizontalAlignment="Left" Margin="405,26,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.005,0.281" Height="32" Foreground="{x:Null}" Width="55" BorderBrush="{x:Null}" >
 
             <Button.Background>
@@ -68,6 +69,9 @@
         <TextBox Text="{Binding Surname,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="566,66,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="#FF320404" BorderBrush="Black" Foreground="White"/>
         <Label Content="AD" HorizontalAlignment="Left" Margin="501,26,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Soyad" HorizontalAlignment="Left" Margin="501,62,0,0" VerticalAlignment="Top" Foreground="White"/>
+      
+<Image Source="/Views/gif.gif" Margin="15,42,680,325" Grid.RowSpan="2" />
+
 
 
     </Grid>
