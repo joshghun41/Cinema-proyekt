@@ -127,5 +127,8 @@
   <ItemGroup>
     <Resource Include="Views\gif.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\big-open-clapper-board-movie-reel-cinema-icon-set-movie-film-elements-flat-design-cinema-movie-time-flat-icons-f-95500226.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
