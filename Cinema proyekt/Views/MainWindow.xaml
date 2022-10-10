@@ -6,7 +6,7 @@
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:Cinema_proyekt" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d"
-        Title="Cinema" Height="450" Width="800" Icon="C:\Users\Help\source\repos\Cinema proyekt\Cinema proyekt\Views\big-open-clapper-board-movie-reel-cinema-icon-set-movie-film-elements-flat-design-cinema-movie-time-flat-icons-f-95500226.jpg">
+        Title="Cinema" BorderThickness="0" ResizeMode="NoResize" Height="500" Width="820" Icon="C:\Users\Help\source\repos\Cinema proyekt\Cinema proyekt\Views\big-open-clapper-board-movie-reel-cinema-icon-set-movie-film-elements-flat-design-cinema-movie-time-flat-icons-f-95500226.jpg">
     <Grid HorizontalAlignment="Left" Width="800">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -15,9 +15,9 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Views/red-curtain (1).jpg"/>
         </Grid.Background>
-        <TextBox Text="{Binding SearchText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  BorderBrush="Wheat" HorizontalAlignment="Left" Margin="215,26,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="185" RenderTransformOrigin="0.531,0.507" Height="32" Foreground="White" Background="#FF220507"/>
+        <TextBox Text="{Binding SearchText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  BorderBrush="Wheat" HorizontalAlignment="Left" Margin="215,26,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="185" RenderTransformOrigin="0.531,0.507" Height="32" Foreground="White" Background="#FF220507" MouseEnter="mauseenter"/>
         <Label Content="Cinema" HorizontalAlignment="Left" Margin="17,-1,0,0" VerticalAlignment="Top" Width="101" FontFamily="Tw Cen MT Condensed" FontSize="36" Foreground="White" Height="53"/>
-        <Button Command="{Binding SearchCommand}" Content="" HorizontalAlignment="Left" Margin="405,26,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.005,0.281" Height="32" Foreground="{x:Null}" Width="55" BorderBrush="{x:Null}" >
+        <Button x:Name="searchbtn" Command="{Binding SearchCommand}" Content="" HorizontalAlignment="Left" Margin="405,26,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.005,0.281" Height="32" Foreground="{x:Null}" Width="55" BorderBrush="{x:Null}" >
 
             <Button.Background>
                 <ImageBrush ImageSource="/Views/search-icon-png-5.png" TileMode="None"/>
@@ -65,12 +65,14 @@
             </ListView.ItemsPanel>
 
         </ListView>
-        <TextBox Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="566,31,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="#FF210204" BorderBrush="Black" Foreground="White"/>
-        <TextBox Text="{Binding Surname,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="566,66,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="#FF320404" BorderBrush="Black" Foreground="White"/>
+        <TextBox x:Name="nametextbox" Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="566,31,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="#FF210204" BorderBrush="Black" Foreground="White"/>
+        <TextBox x:Name="surnametextbox" Text="{Binding Surname,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="566,66,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Background="#FF320404" BorderBrush="Black" Foreground="White"/>
         <Label Content="AD" HorizontalAlignment="Left" Margin="501,26,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Soyad" HorizontalAlignment="Left" Margin="501,62,0,0" VerticalAlignment="Top" Foreground="White"/>
-      
-<Image   Source="/Views/gif.gif" Margin="15,42,680,325" Grid.RowSpan="2" />
+
+        <Image   Source="/Views/gif.gif" Margin="17,48,678,6" IsEnabled="False" />
+        <DatePicker x:Name="datapick" SelectedDate="{Binding BuyTicketCommand  }" HorizontalAlignment="Left" Margin="706,46,0,0" VerticalAlignment="Top" Height="30"/>
+        <Label Content="platinum" HorizontalAlignment="Left" Margin="118,17,0,0" VerticalAlignment="Top" Foreground="#FF00CAFF" Width="88" FontFamily="BankGothic Md BT" Height="25"/>
 
 
 

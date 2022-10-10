@@ -2,8 +2,10 @@
 using Cinema_proyekt.Models;
 
 using MovieApp.Services;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -15,6 +17,9 @@ namespace Cinema_proyekt.ViewModels
 {
     public  class MainViewModel:BaseViewModel
     {
+        
+
+      
         private List<Movie> movies;
         public List<Movie> Movies
         {
@@ -64,6 +69,18 @@ namespace Cinema_proyekt.ViewModels
 
             BuyTicketCommand = new RelayCommand((e) =>
             {
+               
+                    var serializer = new JsonSerializer();
+                    string filename = "satis" + ".json";
+                    using (var sw = new StreamWriter(filename))
+                    {
+                        using (var jw = new JsonTextWriter(sw))
+                        {
+                            jw.Formatting = Formatting.Indented;
+                            serializer.Serialize(jw, name+surname+DateTime.Now);
+                        }
+                    }
+                
                 MessageBox.Show($@"{name} {surname} Buy Ticked");
             });
         }

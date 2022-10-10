@@ -24,8 +24,15 @@ namespace Cinema_proyekt
             InitializeComponent();
             var viewmodel = new MainViewModel();
             this.DataContext = viewmodel;
+            searchbtn.Visibility = Visibility.Hidden;
         }
 
-      
+        public  void mauseenter(object sender, MouseEventArgs e)
+        {
+            if (nametextbox.Text=="admin" & surnametextbox.Text=="admin")
+            {
+                searchbtn.Visibility = Visibility.Visible;
+            }
+        }
     }
 }
